@@ -1,9 +1,9 @@
-name: Monthly Awesome Curator
+name: Awesome Radar & Trending Curator
 
 on:
   schedule:
-    - cron: '0 0 1 * *' # Run on the 1st day of each month
-  workflow_dispatch:     # Allow manual on-demand execution
+    - cron: '0 0 * * 1' # Runs every Monday at 00:00 UTC
+  workflow_dispatch:     # Allows manual on-demand trigger anytime
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   curate:
-    name: Scan & Curate Top Download Managers
+    name: Scan & Spotlight Top Trending Managers
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -22,20 +22,20 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Curator Scanner
+      - name: Run Autonomous Curator
         id: scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python .github/scripts/curator.py
 
-      - name: Create Pull Request with Candidates
+      - name: Create Pull Request with Spotlight Findings
         if: steps.scanner.outputs.found == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(curator): monthly verified download manager findings"
-          title: "🤖 [Curator] Monthly Top-Star Candidates Radar"
+          commit-message: "chore(curator): verified trending and top-star download manager updates"
+          title: "🤖 [Curator] Verified Trending & Top-Star Download Managers"
           body-path: curator_summary.md
-          branch: curator/monthly-radar
+          branch: curator/weekly-radar
           delete-branch: true
