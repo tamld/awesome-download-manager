@@ -1,0 +1,15 @@
+# Lychee configuration for link integrity check
+max_concurrency = 4
+max_retries = 2
+timeout = 10
+
+# Accept 403 as valid since Cloudflare & Google Webstore block GitHub Action CI bots
+accept = [200, 204, 206, 301, 302, 403]
+
+# Exclude mailto, internal anchors, and dead legacy tools scheduled for deprecation
+exclude = [
+  "^#",
+  "^mailto:",
+  "http://www.eagleget.com/.*",
+  "https://ugetdm.com/.*"
+]
