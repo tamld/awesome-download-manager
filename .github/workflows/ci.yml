@@ -1,4 +1,4 @@
-name: CI & Link Integrity
+name: CI & Quality Gate
 
 on:
   push:
@@ -11,12 +11,25 @@ permissions:
   contents: read
 
 jobs:
-  link-checker:
-    name: Check Links
+  validate-and-test:
+    name: Schema, Drift & Link Quality
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Schema, Axiom & Drift Tests
+        run: |
+          python -m unittest discover tests
+
+      - name: Check README Drift
+        run: |
+          python scripts/build_readme.py --check
 
       - name: Verify Link Integrity with Lychee
         uses: lycheeverse/lychee-action@v2

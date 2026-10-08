@@ -1,0 +1,360 @@
+[
+  {
+    "id": "ab-download-manager",
+    "name": "AB Download Manager",
+    "url": "https://abdownloadmanager.com/",
+    "github_repo": "amir1376/ab-download-manager",
+    "stars": 18300,
+    "license": "Apache-2.0",
+    "is_open_source": true,
+    "category": "trending",
+    "trending_badge": "🚀 Trending This Month",
+    "platforms": ["Windows", "Linux"],
+    "technology": "Kotlin / Compose Desktop",
+    "description": "Modern, lightning-fast open-source IDM replacement with browser integration.",
+    "axiom": "Proprietary tools like IDM dominate Windows download acceleration through aggressive dynamic socket chunking but remain closed-source and platform-restricted. AB Download Manager re-engineers this multithreaded chunking architecture atop Kotlin and Jetpack Compose Desktop, delivering an open, transparent, and multiplatform IDM alternative.",
+    "citations": [
+      "https://github.com/amir1376/ab-download-manager#features",
+      "https://github.com/amir1376/ab-download-manager/releases"
+    ],
+    "highlights": [
+      "Modern Jetpack Compose desktop interface",
+      "Native multi-part connection splitting and queue scheduling",
+      "Official Chrome and Firefox companion extensions"
+    ],
+    "tradeoffs": [
+      "Native BitTorrent protocol is not yet embedded; focused strictly on HTTP/HTTPS/FTP stream acceleration."
+    ]
+  },
+  {
+    "id": "gopeed",
+    "name": "Gopeed",
+    "url": "https://gopeed.com/",
+    "github_repo": "GopeedLab/gopeed",
+    "stars": 26700,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "trending",
+    "trending_badge": "⚡ Trending This Week",
+    "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+    "technology": "Golang + Flutter",
+    "description": "Ultra-high performance multi-protocol engine across all desktop and mobile platforms.",
+    "axiom": "Aria2 established the gold standard for headless protocol multiplexing, but decoupling the CLI daemon from separate WebUI clients created significant operational friction. Gopeed unifies high-concurrency Go concurrency primitives with a reactive Flutter client into a single zero-dependency binary running identically across mobile and desktop.",
+    "citations": [
+      "https://github.com/GopeedLab/gopeed#architecture",
+      "https://github.com/GopeedLab/gopeed/releases"
+    ],
+    "highlights": [
+      "Embedded BitTorrent, Magnet, and HTTP/FTP engine",
+      "Cross-platform mobile and desktop consistency",
+      "JavaScript extension ecosystem for custom extractors"
+    ],
+    "tradeoffs": [
+      "Does not bundle advanced stream scraping (HLS/DASH) natively without user-installed extensions."
+    ]
+  },
+  {
+    "id": "open-download-manager",
+    "name": "Open Download Manager",
+    "url": "https://github.com/getodm/open-download-manager",
+    "github_repo": "getodm/open-download-manager",
+    "stars": 20,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "linux",
+    "trending_badge": "🌟 Daily Mover",
+    "platforms": ["Linux"],
+    "technology": "Java 25 + GTK4 / Libadwaita",
+    "description": "Native Linux manager with unified queue for HTTP, Torrents, yt-dlp, and mirrors.",
+    "axiom": "Linux desktop environments lack a cohesive, native download client that unifies diverse protocol engines. Open Download Manager solves this by orchestrating trusted system binaries (aria2, yt-dlp, and httrack) behind a native GTK4/Libadwaita interface with persistent crash-safe queue recovery.",
+    "citations": [
+      "https://github.com/getodm/open-download-manager#features",
+      "https://github.com/getodm/open-download-manager/releases"
+    ],
+    "highlights": [
+      "Native GNOME/GTK4 look and feel",
+      "Unified queue across HTTP, Torrent, and video extractors",
+      "Tor and proxychains routing support"
+    ],
+    "tradeoffs": [
+      "Requires host dependencies (aria2, yt-dlp) or running via standalone AppImage."
+    ]
+  },
+  {
+    "id": "rayburst",
+    "name": "Rayburst",
+    "url": "https://github.com/AnInsomniacy/rayburst",
+    "github_repo": "AnInsomniacy/rayburst",
+    "stars": 10800,
+    "license": "MIT",
+    "is_open_source": true,
+    "category": "legends",
+    "trending_badge": "🌟 Daily Mover",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Rust / Modern Web",
+    "description": "High-throughput, modular download engine engineered for modern gigabit bandwidth.",
+    "axiom": "Legacy download managers frequently bottleneck on high-bandwidth fiber connections due to memory allocation overhead and single-threaded queue arbitration. Rayburst leverages Rust zero-cost abstractions and asynchronous I/O to maximize bandwidth saturation with minimal CPU overhead.",
+    "citations": [
+      "https://github.com/AnInsomniacy/rayburst#readme"
+    ],
+    "highlights": [
+      "Ultra-low memory footprint",
+      "High-concurrency async socket chunking",
+      "Modern clean architectural stack"
+    ],
+    "tradeoffs": [
+      "Relatively recent ecosystem; plugin support continues active development."
+    ]
+  },
+  {
+    "id": "motrix",
+    "name": "Motrix",
+    "url": "https://motrix.app/",
+    "github_repo": "agalwood/Motrix",
+    "stars": 56100,
+    "license": "MIT",
+    "is_open_source": true,
+    "category": "legends",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Electron + aria2",
+    "description": "Full-featured, elegant desktop manager supporting HTTP, FTP, BitTorrent, and Magnet.",
+    "axiom": "Complex torrent and multi-source download tooling historically suffered from cluttered, utilitarian interfaces. Motrix packaged the raw performance of aria2c within a polished, minimalist desktop interface that made advanced protocol downloading accessible to non-technical users.",
+    "citations": [
+      "https://motrix.app/",
+      "https://github.com/agalwood/Motrix"
+    ],
+    "highlights": [
+      "Sleek, distraction-free user interface",
+      "Automatic tracker updating",
+      "Supports up to 64 concurrent download threads"
+    ],
+    "tradeoffs": [
+      "Electron runtime memory footprint is higher than pure native alternatives."
+    ]
+  },
+  {
+    "id": "aria2",
+    "name": "aria2",
+    "url": "https://github.com/aria2/aria2",
+    "github_repo": "aria2/aria2",
+    "stars": 34000,
+    "license": "GPL-2.0",
+    "is_open_source": true,
+    "category": "cli",
+    "platforms": ["Linux", "macOS", "Windows", "Android", "FreeBSD"],
+    "technology": "C++",
+    "description": "The definitive multi-protocol, multi-source command-line download accelerator.",
+    "axiom": "Maximizing bandwidth utilization over unreliable networks requires simultaneous multi-source segment downloading across HTTP, FTP, and BitTorrent simultaneously. aria2 established the protocol-multiplexed chunking model that powers nearly all modern open-source download GUIs.",
+    "citations": [
+      "https://aria2.github.io/manual/en/html/README.html",
+      "https://github.com/aria2/aria2"
+    ],
+    "highlights": [
+      "Negligible CPU and RAM overhead",
+      "Full JSON-RPC and XML-RPC remote control",
+      "Metalink and BitTorrent chunk verification"
+    ],
+    "tradeoffs": [
+      "Pure command-line tool; requires a separate WebUI or frontend client for desktop users."
+    ]
+  },
+  {
+    "id": "surge",
+    "name": "Surge",
+    "url": "https://github.com/SurgeDM/Surge",
+    "github_repo": "SurgeDM/Surge",
+    "stars": 3580,
+    "license": "MIT",
+    "is_open_source": true,
+    "category": "cli",
+    "platforms": ["Linux", "macOS", "Windows"],
+    "technology": "Go",
+    "description": "Blazing fast Terminal User Interface (TUI) download manager built for power users.",
+    "axiom": "Command-line downloaders like curl or aria2 lack dynamic, interactive terminal queue visualization without opening separate monitoring ports. Surge delivers an interactive keyboard-driven TUI that provides real-time chunk progress, speed graphs, and queue management inside SSH sessions.",
+    "citations": [
+      "https://github.com/SurgeDM/Surge#readme"
+    ],
+    "highlights": [
+      "Interactive terminal UI with keyboard shortcuts",
+      "Concurrent chunk acceleration in Go",
+      "Zero graphical dependencies"
+    ],
+    "tradeoffs": [
+      "Targeted specifically at terminal and server operators; no desktop browser extension."
+    ]
+  },
+  {
+    "id": "idm",
+    "name": "Internet Download Manager (IDM)",
+    "url": "https://www.internetdownloadmanager.com/",
+    "stars": 0,
+    "license": "Proprietary",
+    "is_open_source": false,
+    "category": "desktop",
+    "platforms": ["Windows"],
+    "technology": "C++ Win32 Native",
+    "description": "Benchmark commercial download accelerator with robust browser catching.",
+    "axiom": "Web browsers frequently drop long-running file transfers and throttle single-stream downloads. IDM implemented dynamic file segmentation with persistent socket reuse, establishing the de facto speed benchmark for Windows desktop download management.",
+    "citations": [
+      "https://www.internetdownloadmanager.com/"
+    ],
+    "highlights": [
+      "Unmatched browser integration and dynamic video catching",
+      "Lightweight native Windows executable",
+      "Resilient resume capability"
+    ],
+    "tradeoffs": [
+      "Closed source, commercial license required after 30-day trial, Windows-only."
+    ]
+  },
+  {
+    "id": "fdm",
+    "name": "Free Download Manager (FDM)",
+    "url": "https://www.freedownloadmanager.org/",
+    "stars": 0,
+    "license": "Proprietary (Free)",
+    "is_open_source": false,
+    "category": "desktop",
+    "platforms": ["Windows", "macOS", "Linux", "Android"],
+    "technology": "C++ / Qt",
+    "description": "Established all-in-one download manager supporting torrents and media.",
+    "axiom": "Desktop users often juggle separate software for web downloads and BitTorrent transfers. FDM combines both into a single freeware client with scheduled traffic throttling and browser catching across all major desktop OSes.",
+    "citations": [
+      "https://www.freedownloadmanager.org/features.htm"
+    ],
+    "highlights": [
+      "Combined HTTP and BitTorrent queue",
+      "Traffic shaper to prevent bandwidth hogging",
+      "Native clients for Windows, macOS, Linux, and Android"
+    ],
+    "tradeoffs": [
+      "Closed source freeware."
+    ]
+  },
+  {
+    "id": "persepolis",
+    "name": "Persepolis Download Manager",
+    "url": "https://persepolisdm.github.io/",
+    "github_repo": "persepolisdm/persepolis",
+    "stars": 7470,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "linux",
+    "platforms": ["Linux", "Windows", "macOS", "BSD"],
+    "technology": "Python + PyQt + aria2",
+    "description": "Lightweight Python/Qt GUI frontend for the aria2 download engine.",
+    "axiom": "While aria2 provides unparalleled speed, non-developer users struggle with CLI flags and configuration files. Persepolis provides a native PyQt interface that manages aria2 daemon lifecycles transparently in the background.",
+    "citations": [
+      "https://persepolisdm.github.io/",
+      "https://github.com/persepolisdm/persepolis"
+    ],
+    "highlights": [
+      "Multi-segment downloading via aria2c",
+      "Video downloading integration",
+      "Scheduled queue downloads"
+    ],
+    "tradeoffs": [
+      "Relies on background daemon management which can occasionally desynchronize on non-standard OS setups."
+    ]
+  },
+  {
+    "id": "uget",
+    "name": "uGet",
+    "url": "https://github.com/ugetdm/uget",
+    "github_repo": "ugetdm/uget",
+    "stars": 550,
+    "license": "LGPL-2.1",
+    "is_open_source": true,
+    "category": "linux",
+    "platforms": ["Linux", "Windows", "Android"],
+    "technology": "C + GTK3",
+    "description": "Classic lightweight multi-connection download manager with clipboard monitoring.",
+    "axiom": "Resource-constrained Linux installations need a download manager that uses minimal memory. uGet was written in pure C with GTK to provide multi-connection acceleration with virtually zero memory overhead.",
+    "citations": [
+      "https://github.com/ugetdm/uget"
+    ],
+    "highlights": [
+      "Ultra-low memory footprint (< 30MB)",
+      "Dual backend engine support (curl or aria2)",
+      "Clipboard watcher and batch imports"
+    ],
+    "tradeoffs": [
+      "Infrequent maintenance cycles; older GTK3 interface."
+    ]
+  },
+  {
+    "id": "downthemall",
+    "name": "DownThemAll!",
+    "url": "https://www.downthemall.net/",
+    "github_repo": "downthemall/downthemall",
+    "stars": 2200,
+    "license": "GPL-2.0",
+    "is_open_source": true,
+    "category": "extensions",
+    "platforms": ["Firefox", "Chrome", "Edge", "Opera"],
+    "technology": "WebExtension JavaScript",
+    "description": "Advanced in-browser batch download utility with regex filtering.",
+    "axiom": "Downloading dozens of links or images from a webpage manually is tedious and prone to rate limits. DownThemAll! introduces advanced batch pattern matching and multi-stream acceleration directly inside browser tabs without external executables.",
+    "citations": [
+      "https://www.downthemall.net/",
+      "https://github.com/downthemall/downthemall"
+    ],
+    "highlights": [
+      "1-click download of all page media",
+      "Regular expression filename mask filters",
+      "Zero external binary dependencies"
+    ],
+    "tradeoffs": [
+      "Subject to browser WebExtension API limitations on socket management."
+    ]
+  },
+  {
+    "id": "chrono",
+    "name": "Chrono Download Manager",
+    "url": "https://chromewebstore.google.com/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn",
+    "stars": 0,
+    "license": "Proprietary (Free)",
+    "is_open_source": false,
+    "category": "extensions",
+    "platforms": ["Chrome", "Edge", "Brave"],
+    "technology": "Chromium Extension",
+    "description": "Complete download manager integrated directly inside the browser tab.",
+    "axiom": "Traditional browser download shelves are minimal and lack queue management. Chrono replaces the default Chromium downloads shelf with a full tab-based management console, video sniffer, and batch downloader.",
+    "citations": [
+      "https://chromewebstore.google.com/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn"
+    ],
+    "highlights": [
+      "Replaces default browser download shelf",
+      "Built-in media sniffer for video and audio",
+      "Customizable rule filters"
+    ],
+    "tradeoffs": [
+      "Closed source."
+    ]
+  },
+  {
+    "id": "pyload",
+    "name": "pyLoad",
+    "url": "https://github.com/pyload/pyload",
+    "github_repo": "pyload/pyload",
+    "stars": 3880,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "selfhosted",
+    "platforms": ["Linux", "Docker", "NAS", "Windows", "macOS"],
+    "technology": "Python",
+    "description": "Pure Python lightweight download manager designed for NAS, Homelabs, and servers.",
+    "axiom": "Servers, NAS appliances, and Docker homelabs require an always-on headless download service that can be managed via Web UI, mobile app, or CLI without running a desktop environment. pyLoad provides a modular server architecture with built-in CAPTCHA handling and hoster plugins.",
+    "citations": [
+      "https://github.com/pyload/pyload#readme"
+    ],
+    "highlights": [
+      "Headless core with responsive Web UI",
+      "Extensive plugin system for file hosters",
+      "REST API for remote automation"
+    ],
+    "tradeoffs": [
+      "Requires container or Python environment setup."
+    ]
+  }
+]
