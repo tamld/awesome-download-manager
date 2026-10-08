@@ -36,6 +36,7 @@ Explore a curated list of the most effective download management software availa
 | [**Flash Video Downloader**](https://chrome.google.com/webstore/detail/flash-video-downloader/pekjnippjpnkljfnjmgldiiocdbnlhaw) | Extension to download videos from numerous sites. | Chrome                       | 🆓 Free               | Browser Extension      |
 | [**Chrono Download Manager**](https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn) | Full-featured manager integrated into Chrome. | Chrome                       | 🆓 Free               | Browser Extension      |
 | [**Free Download Manager Chrome Extension**](https://chrome.google.com/webstore/detail/free-download-manager/nppmjofihckljjcfmgkdbmkggcbcojfn) | Integrates Free Download Manager with Chrome for seamless downloads. | Chrome | 🆓 Free | Browser Extension |
+| [**Open Download Manager**](https://github.com/albilu/open-download-manager) | Native Linux manager with one queue for HTTP/FTP, BitTorrent, video (yt-dlp) and site mirrors (HTTrack). | N/A | 🆓 Free | Linux |
 
 ---
 
