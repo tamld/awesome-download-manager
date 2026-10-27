@@ -22,7 +22,8 @@ MAX_PUSH_AGE_DAYS = 180
 
 BLACKLIST_KEYWORDS = [
     "activation", "crack", "patch", "keygen", "reset-trial",
-    "trial-reset", "license-key", "kms", "bypass", "pirate", "tracker"
+    "trial-reset", "license-key", "kms", "bypass", "pirate", "tracker",
+    "fuckingfast", "nsfw", "porn", "xxx", "adult", "hentai", "18+"
 ]
 
 ALLOWED_LICENSES = {

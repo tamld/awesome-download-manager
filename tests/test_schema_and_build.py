@@ -8,6 +8,7 @@ Enforces:
 4. Build Idempotency (Deterministic README generation)
 """
 
+import importlib.util
 import json
 import os
 import re
@@ -114,6 +115,15 @@ class TestToolsSchemaAndBuild(unittest.TestCase):
             second_run = f.read()
 
         self.assertEqual(first_run, second_run, "Builder is non-deterministic (output changes between runs)")
+
+    def test_07_nsfw_blacklist_filter(self):
+        """NSFW/profanity keywords must be blacklisted in curator."""
+        curator_path = os.path.join(ROOT_DIR, ".github", "scripts", "curator.py")
+        spec = importlib.util.spec_from_file_location("curator", curator_path)
+        curator = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(curator)
+
+        self.assertTrue(curator.is_blacklisted("Bulk downloader for fuckingfast.co"))
 
 if __name__ == "__main__":
     unittest.main()
