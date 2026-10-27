@@ -1,6 +1,6 @@
 ### 🤖 Autonomous Curator — Verified & Trending Findings
 
-Scanned GitHub and verified **16** candidate(s) satisfying all 4 Invariants:
+Scanned GitHub and verified **15** candidate(s) satisfying all 4 Invariants:
 - ✅ **Safe & Auditable**: OSI-Approved License confirmed, no crack/keygen.
 - ✅ **Alive & Active**: HTTP 200 probed, active commit in < 180 days.
 - ✅ **High Social Proof**: Star count $\ge 1,000$.
@@ -13,7 +13,6 @@ Scanned GitHub and verified **16** candidate(s) satisfying all 4 Invariants:
 | ⚡ Weekly High-Velocity | [**xdm**](https://github.com/subhra74/xdm) | ⭐ 8,073 | `GPL-3.0` | Kotlin | Fast, reliable download accelerator and video downloader, trusted for 13+ years |
 | 🌟 Active Innovator | [**Tiercel**](https://github.com/Danie1s/Tiercel) | ⭐ 2,875 | `MIT` | Swift | Pure Swift iOS download framework with background downloads, relaunch recovery, resumable transfers, and task management. |
 | 🌟 Active Innovator | [**motrix-webextension**](https://github.com/gautamkrishnar/motrix-webextension) | ⭐ 2,023 | `GPL-3.0` | JavaScript | A browser extension for the Motrix Download Manager and its forks |
-| 🌟 Active Innovator | [**moondownloader**](https://github.com/LeyckerS/moondownloader) | ⭐ 1,596 | `MIT` | Python | Bulk file downloader for datanodes.to and fuckingfast.co — real-Chrome extraction over CDP, pure-HTTP extraction with a Chrome TLS fingerprint, aiohttp streaming, WebView2 GUI and a headless CLI. Windows, Python 3.10+, MIT. |
 | 🌟 Active Innovator | [**brisk**](https://github.com/BrisklyDev/brisk) | ⭐ 1,546 | `GPL-3.0` | Dart | Ultra-fast, modern download manager for desktop |
 | 🌟 Active Innovator | [**Aria2-Explorer**](https://github.com/alexhua/Aria2-Explorer) | ⭐ 1,248 | `BSD-3-Clause` | JavaScript | An aria2 download task management extension for chromium based browser |
 | 🌟 Active Innovator | [**pkgi-ps3**](https://github.com/bucanero/pkgi-ps3) | ⭐ 1,168 | `GPL-2.0` | C | A PlayStation 3 package download tool |
