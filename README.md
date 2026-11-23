@@ -142,6 +142,7 @@
 | :--- | :--- | :--- | :--- |
 | [**Internet Download Manager (IDM)**](https://www.internetdownloadmanager.com/) | Benchmark commercial download accelerator with robust browser catching. | 💵 Proprietary | Windows |
 | [**Free Download Manager (FDM)**](https://www.freedownloadmanager.org/) | Established all-in-one download manager supporting torrents and media. | 💵 Proprietary (Free) | Windows, macOS, Linux, Android |
+| [**Prism**](https://prismdl.site/) | Cross-platform IDM-style manager with up to 32 connections per file, browser catching, video/MP3 via yt-dlp and torrents. | 🆓 Free (MIT) | Windows, macOS, Linux |
 
 <details>
 <summary>🔍 <b>Architecture & Axioms: Internet Download Manager (IDM)</b> <i>(Click to expand)</i></summary>
@@ -160,6 +161,16 @@
 - **Technical Citations & Proof**: [https://www.freedownloadmanager.org/features.htm](https://www.freedownloadmanager.org/features.htm)
 - **Key Strengths**: Combined HTTP and BitTorrent queue; Traffic shaper to prevent bandwidth hogging; Native clients for Windows, macOS, Linux, and Android
 - **Engineering Tradeoffs**: Closed source freeware.
+
+</details>
+
+<details>
+<summary>🔍 <b>Architecture & Axioms: Prism</b> <i>(Click to expand)</i></summary>
+
+- **Design Axiom**: IDM's browser catching and segmented downloads are closed and Windows-only. Prism rebuilds that workflow as an MIT-licensed Rust engine (tokio, rustls) in a Tauri shell: it keeps every connection busy until the last byte and writes data to disk before it saves progress, so a crash or power loss resumes from the last byte it safely wrote.
+- **Technical Citations & Proof**: [https://github.com/FortoGraphy/prism-download-manager#readme](https://github.com/FortoGraphy/prism-download-manager#readme), [https://github.com/FortoGraphy/prism-download-manager/blob/main/ARCHITECTURE.md](https://github.com/FortoGraphy/prism-download-manager/blob/main/ARCHITECTURE.md)
+- **Key Strengths**: Up to 32 connections per file, with per-host memory and polite back-off; Resume checks the file's size, ETag and Last-Modified so a changed file is never stitched from two versions; Browser extension for Chromium browsers and Firefox, video/MP3 through yt-dlp, BitTorrent and magnet links, queues and a scheduler
+- **Engineering Tradeoffs**: Young project (first release in October 2026); Installers are not code-signed and macOS builds are not notarized yet, so SmartScreen and Gatekeeper warn on first launch.
 
 </details>
 
