@@ -6,8 +6,8 @@ on:
   workflow_dispatch:     # Allows manual on-demand trigger anytime
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+  issues: write
 
 jobs:
   curate:
@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
@@ -29,13 +29,21 @@ jobs:
         run: |
           python .github/scripts/curator.py
 
-      - name: Create Pull Request with Spotlight Findings
+      - name: Publish Radar Summary to Job Summary
         if: steps.scanner.outputs.found == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(curator): verified trending and top-star download manager updates"
-          title: "🤖 [Curator] Verified Trending & Top-Star Download Managers"
-          body-path: curator_summary.md
-          branch: curator/weekly-radar
-          delete-branch: true
+        run: |
+          cat curator_summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create or Update Weekly Radar Issue
+        if: steps.scanner.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ISSUE_TITLE="🤖 [Curator] Weekly Radar Candidates"
+          ISSUE_NUM=$(gh issue list --state open --search "\"$ISSUE_TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$ISSUE_NUM" ]; then
+            gh issue edit "$ISSUE_NUM" --body-file curator_summary.md
+            echo "Updated radar issue #$ISSUE_NUM"
+          else
+            gh issue create --title "$ISSUE_TITLE" --label "enhancement" --body-file curator_summary.md
+          fi

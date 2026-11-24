@@ -1,0 +1,13 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# CI & generated ephemeral artifacts
+lychee/
+curator_summary.md
+
+# OS / Editor
+.DS_Store

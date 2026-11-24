@@ -117,13 +117,26 @@ class TestToolsSchemaAndBuild(unittest.TestCase):
         self.assertEqual(first_run, second_run, "Builder is non-deterministic (output changes between runs)")
 
     def test_07_nsfw_blacklist_filter(self):
-        """NSFW/profanity keywords must be blacklisted in curator."""
+        """NSFW/profanity keywords must be blacklisted in curator without false positives."""
         curator_path = os.path.join(ROOT_DIR, ".github", "scripts", "curator.py")
         spec = importlib.util.spec_from_file_location("curator", curator_path)
         curator = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(curator)
 
         self.assertTrue(curator.is_blacklisted("Bulk downloader for fuckingfast.co"))
+        self.assertTrue(curator.is_blacklisted("Download patch tool 18+"))
+        self.assertFalse(curator.is_blacklisted("High-speed event dispatcher for HTTP streams"))
+
+    def test_08_curator_dedup_against_ssot(self):
+        """Curator deduplication must track github_repo and URLs from data/tools.json."""
+        curator_path = os.path.join(ROOT_DIR, ".github", "scripts", "curator.py")
+        spec = importlib.util.spec_from_file_location("curator", curator_path)
+        curator = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(curator)
+
+        repos, urls = curator.load_existing_identifiers(DATA_PATH, README_PATH)
+        self.assertIn("agalwood/motrix", repos)
+        self.assertIn("https://github.com/downthemall/downthemall", urls)
 
 if __name__ == "__main__":
     unittest.main()
