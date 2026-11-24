@@ -27,10 +27,10 @@
 
 | Spotlight Period | Software | Stars | Technology | Key Highlights |
 | :--- | :--- | :--- | :--- | :--- |
-| 🚀 Trending This Month | [**AB Download Manager**](https://abdownloadmanager.com/) | ⭐ 18,300 | Kotlin / Compose Desktop | Modern, lightning-fast open-source IDM replacement with browser integration. |
-| ⚡ Trending This Week | [**Gopeed**](https://gopeed.com/) | ⭐ 26,700 | Golang + Flutter | Ultra-high performance multi-protocol engine across all desktop and mobile platforms. |
-| 🌟 Daily Mover | [**Open Download Manager**](https://github.com/getodm/open-download-manager) | ⭐ 20 | Java 25 + GTK4 / Libadwaita | Native Linux manager with unified queue for HTTP, Torrents, yt-dlp, and mirrors. |
-| 🌟 Daily Mover | [**Rayburst**](https://github.com/AnInsomniacy/rayburst) | ⭐ 10,800 | Rust / Modern Web | High-throughput, modular download engine engineered for modern gigabit bandwidth. |
+| 🚀 Trending This Month | [**AB Download Manager**](https://abdownloadmanager.com/) | ⭐ 19,509 | Kotlin / Compose Desktop | Modern, lightning-fast open-source IDM replacement with browser integration. |
+| ⚡ Trending This Week | [**Gopeed**](https://gopeed.com/) | ⭐ 27,953 | Golang + Flutter | Ultra-high performance multi-protocol engine across all desktop and mobile platforms. |
+| 🌟 Daily Mover | [**Open Download Manager**](https://github.com/getodm/open-download-manager) | ⭐ 2 | Java 25 + GTK4 / Libadwaita | Native Linux manager with unified queue for HTTP, Torrents, yt-dlp, and mirrors. |
+| 🌟 Daily Mover | [**Rayburst**](https://github.com/AnInsomniacy/rayburst) | ⭐ 11,697 | Rust / Modern Web | High-throughput, modular download engine engineered for modern gigabit bandwidth. |
 
 <details>
 <summary>🔍 <b>Architecture & Axioms: AB Download Manager</b> <i>(Click to expand)</i></summary>
@@ -76,13 +76,13 @@
 
 ## 🏆 All-Time Legends (≥ 10k Stars)
 
-| Software & Link | Description | Technology Stack | License | Supported Platforms |
-| :--- | :--- | :--- | :--- | :--- |
-| [**AB Download Manager**](https://abdownloadmanager.com/) | Modern, lightning-fast open-source IDM replacement with browser integration. | Kotlin / Compose Desktop | 🆓 Free (Apache-2.0) | Windows, Linux |
-| [**Gopeed**](https://gopeed.com/) | Ultra-high performance multi-protocol engine across all desktop and mobile platforms. | Golang + Flutter | 🆓 Free (GPL-3.0) | Windows, macOS, Linux, Android, iOS |
-| [**Rayburst**](https://github.com/AnInsomniacy/rayburst) | High-throughput, modular download engine engineered for modern gigabit bandwidth. | Rust / Modern Web | 🆓 Free (MIT) | Windows, macOS, Linux |
-| [**Motrix**](https://motrix.app/) | Full-featured, elegant desktop manager supporting HTTP, FTP, BitTorrent, and Magnet. | Electron + aria2 | 🆓 Free (MIT) | Windows, macOS, Linux |
-| [**aria2**](https://github.com/aria2/aria2) | The definitive multi-protocol, multi-source command-line download accelerator. | C++ | 🆓 Free (GPL-2.0) | Linux, macOS, Windows, Android, FreeBSD |
+| Software & Link | Stars | Description | Technology Stack | License | Supported Platforms |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [**AB Download Manager**](https://abdownloadmanager.com/) | ⭐ 19,509 | Modern, lightning-fast open-source IDM replacement with browser integration. | Kotlin / Compose Desktop | 🆓 Free (Apache-2.0) | Windows, Linux |
+| [**Gopeed**](https://gopeed.com/) | ⭐ 27,953 | Ultra-high performance multi-protocol engine across all desktop and mobile platforms. | Golang + Flutter | 🆓 Free (GPL-3.0) | Windows, macOS, Linux, Android, iOS |
+| [**Rayburst**](https://github.com/AnInsomniacy/rayburst) | ⭐ 11,697 | High-throughput, modular download engine engineered for modern gigabit bandwidth. | Rust / Modern Web | 🆓 Free (MIT) | Windows, macOS, Linux |
+| [**Motrix**](https://motrix.app/) | ⭐ 58,770 | Full-featured, elegant desktop manager supporting HTTP, FTP, BitTorrent, and Magnet. | Electron + aria2 | 🆓 Free (MIT) | Windows, macOS, Linux |
+| [**aria2**](https://github.com/aria2/aria2) | ⭐ 43,600 | The definitive multi-protocol, multi-source command-line download accelerator. | C++ | 🆓 Free (GPL-2.0) | Linux, macOS, Windows, Android, FreeBSD |
 
 <details>
 <summary>🔍 <b>Architecture & Axioms: AB Download Manager</b> <i>(Click to expand)</i></summary>
@@ -249,14 +249,14 @@
 
 | Extension & Link | Description | Target Browsers | License |
 | :--- | :--- | :--- | :--- |
-| [**DownThemAll!**](https://www.downthemall.net/) | Advanced in-browser batch download utility with regex filtering. | Firefox, Chrome, Edge, Opera | 🆓 Free (GPL-2.0) |
+| [**DownThemAll!**](https://github.com/downthemall/downthemall) | Advanced in-browser batch download utility with regex filtering. | Firefox, Chrome, Edge, Opera | 🆓 Free (GPL-2.0) |
 | [**Chrono Download Manager**](https://chromewebstore.google.com/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn) | Complete download manager integrated directly inside the browser tab. | Chrome, Edge, Brave | 💵 Proprietary (Free) |
 
 <details>
 <summary>🔍 <b>Architecture & Axioms: DownThemAll!</b> <i>(Click to expand)</i></summary>
 
 - **Design Axiom**: Downloading dozens of links or images from a webpage manually is tedious and prone to rate limits. DownThemAll! introduces advanced batch pattern matching and multi-stream acceleration directly inside browser tabs without external executables.
-- **Technical Citations & Proof**: [https://www.downthemall.net/](https://www.downthemall.net/), [https://github.com/downthemall/downthemall](https://github.com/downthemall/downthemall)
+- **Technical Citations & Proof**: [https://github.com/downthemall/downthemall](https://github.com/downthemall/downthemall), [https://github.com/downthemall/downthemall/releases](https://github.com/downthemall/downthemall/releases)
 - **Key Strengths**: 1-click download of all page media; Regular expression filename mask filters; Zero external binary dependencies
 - **Engineering Tradeoffs**: Subject to browser WebExtension API limitations on socket management.
 

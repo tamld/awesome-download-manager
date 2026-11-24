@@ -96,13 +96,13 @@ def build_readme():
 
     # 2. All-Time Legends
     out.append("## 🏆 All-Time Legends (≥ 10k Stars)\n")
-    out.append("| Software & Link | Description | Technology Stack | License | Supported Platforms |")
-    out.append("| :--- | :--- | :--- | :--- | :--- |")
+    out.append("| Software & Link | Stars | Description | Technology Stack | License | Supported Platforms |")
+    out.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
     for t in unique_legends:
-        stars_badge = f"⭐ {t['stars']:,}" if t.get("stars") else ""
+        stars_badge = f"⭐ {t['stars']:,}" if t.get("stars") else "N/A"
         platforms = ", ".join(t.get("platforms", []))
         lic = f"🆓 Free ({t['license']})" if t.get("is_open_source") else f"💵 {t['license']}"
-        out.append(f"| [**{t['name']}**]({t['url']}) | {escape_pipe(t['description'])} | {escape_pipe(t.get('technology', 'N/A'))} | {lic} | {escape_pipe(platforms)} |")
+        out.append(f"| [**{t['name']}**]({t['url']}) | {stars_badge} | {escape_pipe(t['description'])} | {escape_pipe(t.get('technology', 'N/A'))} | {lic} | {escape_pipe(platforms)} |")
     out.append("")
     for t in unique_legends:
         out.append(render_dossier(t))
