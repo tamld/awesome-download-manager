@@ -107,6 +107,32 @@
     ]
   },
   {
+    "id": "misterdownloadmanager",
+    "name": "Mister Download Manager",
+    "url": "https://misterdownloadmanager.com",
+    "github_repo": "anefzaoui/misterdownloadmanager",
+    "stars": 17683,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "legends",
+    "platforms": ["Windows", "Linux", "macOS"],
+    "technology": "Rust",
+    "description": "Clean-room open-source download manager written in pure Rust with HTTP segmentation, torrents, and browser integration.",
+    "axiom": "Traditional download accelerators either lock segmented HTTP engines behind proprietary licenses or depend on heavy garbage-collected runtimes. Mister Download Manager implements an RFC-compliant Rust download engine (mdm-engine) paired with BitTorrent (librqbit), yt-dlp, and cross-browser extensions in a single native workspace.",
+    "citations": [
+      "https://github.com/anefzaoui/misterdownloadmanager#readme",
+      "https://github.com/anefzaoui/misterdownloadmanager/blob/main/docs/ARCHITECTURE.md"
+    ],
+    "highlights": [
+      "Clean-room Rust workspace with crash-safe resume and fuzz-tested engine crates",
+      "Native BitTorrent/magnet support alongside yt-dlp media and gallery-dl extraction",
+      "Companion extensions on Chrome Web Store and Firefox Add-ons"
+    ],
+    "tradeoffs": [
+      "Young project; installers are not code-signed yet and macOS builds remain experimental."
+    ]
+  },
+  {
     "id": "motrix",
     "name": "Motrix",
     "url": "https://motrix.app/",
@@ -259,6 +285,84 @@
     ]
   },
   {
+    "id": "xdm",
+    "name": "Xtreme Download Manager (XDM)",
+    "url": "https://xtremedownloadmanager.com/",
+    "github_repo": "subhra74/xdm",
+    "stars": 8818,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "desktop",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Kotlin / Java (FlatLaf)",
+    "description": "Veteran open-source download accelerator with streaming video grabbing, torrent support, and headless CLI mode.",
+    "axiom": "Users migrating off proprietary accelerators need one tool that bridges multi-segment HTTP acceleration, HLS/DASH stream capture, and BitTorrent without switching apps. XDM separates its UI-agnostic download core (xdm-core) from a FlatLaf desktop shell and local browser-integration server.",
+    "citations": [
+      "https://github.com/subhra74/xdm#readme",
+      "https://github.com/subhra74/xdm/releases"
+    ],
+    "highlights": [
+      "Multi-connection segmented downloads with expired-link refresh",
+      "One-click HLS/DASH video grabbing via Chrome and Firefox extensions",
+      "Built-in torrent/magnet client plus headless CLI mode (xdm-app --headless)"
+    ],
+    "tradeoffs": [
+      "Version 9.x is undergoing an active rebuild in Kotlin/Java and relies on a JVM runtime."
+    ]
+  },
+  {
+    "id": "brisk",
+    "name": "Brisk",
+    "url": "https://github.com/BrisklyDev/brisk",
+    "github_repo": "BrisklyDev/brisk",
+    "stars": 1806,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "desktop",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Dart + Flutter",
+    "description": "Modern cross-platform desktop download manager powered by a custom dynamic-reuse Dart engine.",
+    "axiom": "Wrapping external CLI binaries like aria2 limits fine-grained socket scheduling and complicates packaging. Brisk implements a custom pure-Dart download engine from scratch that spawns connections dynamically and reassigns idle workers to remaining byte ranges until completion.",
+    "citations": [
+      "https://github.com/BrisklyDev/brisk#readme",
+      "https://github.com/BrisklyDev/brisk/releases"
+    ],
+    "highlights": [
+      "Custom Dart engine with dynamic connection spawn and byte-range reuse",
+      "M3U8 stream capture and multi-link extraction via companion browser extension",
+      "First-class packaging for Windows, macOS, Flatpak, Snap, and AUR"
+    ],
+    "tradeoffs": [
+      "Focused on HTTP and M3U8 streams without embedded BitTorrent support; Linux tarballs require keybinder-3 and appindicator3."
+    ]
+  },
+  {
+    "id": "ariang-native",
+    "name": "AriaNg Native",
+    "url": "https://github.com/mayswind/AriaNg-Native",
+    "github_repo": "mayswind/AriaNg-Native",
+    "stars": 2730,
+    "license": "MIT",
+    "is_open_source": true,
+    "category": "desktop",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Electron + JavaScript",
+    "description": "Standalone desktop client for AriaNg adding torrent file previews, tray controls, and magnet association.",
+    "axiom": "Running AriaNg inside a regular web browser prevents OS-level protocol association, local file-system task creation, and background tray persistence. AriaNg Native packages the AriaNg UI inside Electron to bridge local OS integration with remote or local aria2 RPC daemons.",
+    "citations": [
+      "https://github.com/mayswind/AriaNg-Native#readme",
+      "https://github.com/mayswind/AriaNg-Native/releases"
+    ],
+    "highlights": [
+      "Drag-and-drop .torrent/.metalink preview with selective file downloading",
+      "Native magnet protocol handling, CLI arguments, and system tray minimization",
+      "Full parity with AriaNg multi-RPC host management"
+    ],
+    "tradeoffs": [
+      "Electron memory overhead; macOS Apple Silicon builds require clearing the quarantine attribute on first run."
+    ]
+  },
+  {
     "id": "persepolis",
     "name": "Persepolis Download Manager",
     "url": "https://persepolisdm.github.io/",
@@ -310,6 +414,32 @@
     ]
   },
   {
+    "id": "varia",
+    "name": "Varia",
+    "url": "https://giantpinkrobots.github.io/varia/",
+    "github_repo": "giantpinkrobots/varia",
+    "stars": 1926,
+    "license": "MPL-2.0",
+    "is_open_source": true,
+    "category": "linux",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "technology": "Python + GTK4 / Libadwaita + aria2 / yt-dlp",
+    "description": "GTK4/Libadwaita download manager uniting regular files, torrents, and video streams via aria2 and yt-dlp.",
+    "axiom": "Modern GNOME desktops need an adaptive Libadwaita downloader that handles HTTP acceleration, BitTorrent, and media streams without exposing raw CLI flags. Varia coordinates aria2 and yt-dlp behind a native GTK4 UI distributed natively via Flathub, Snap, and desktop installers.",
+    "citations": [
+      "https://github.com/giantpinkrobots/varia#readme",
+      "https://github.com/giantpinkrobots/varia/releases"
+    ],
+    "highlights": [
+      "Native GTK4/Libadwaita design with official Flathub and Snap packages",
+      "Unified queue for HTTP files, torrents/magnets, and yt-dlp video/audio",
+      "Companion Firefox and Chrome integrator extensions"
+    ],
+    "tradeoffs": [
+      "Depends on underlying aria2 and yt-dlp backends; macOS Intel builds update less frequently than Apple Silicon."
+    ]
+  },
+  {
     "id": "downthemall",
     "name": "DownThemAll!",
     "url": "https://github.com/downthemall/downthemall",
@@ -357,6 +487,84 @@
     ],
     "tradeoffs": [
       "Closed source."
+    ]
+  },
+  {
+    "id": "motrix-webextension",
+    "name": "Motrix WebExtension",
+    "url": "https://github.com/gautamkrishnar/motrix-webextension",
+    "github_repo": "gautamkrishnar/motrix-webextension",
+    "stars": 1954,
+    "license": "GPL-3.0",
+    "is_open_source": true,
+    "category": "extensions",
+    "platforms": ["Chrome", "Firefox", "Edge", "Opera"],
+    "technology": "WebExtension JavaScript",
+    "description": "Browser extension that automatically forwards browser downloads to Motrix and compatible aria2 forks.",
+    "axiom": "Desktop aria2 GUIs like Motrix cannot intercept browser click-to-download flows without a bridge inside the browser's downloads API. Motrix WebExtension captures download events and dispatches them over authenticated JSON-RPC with configurable port and secret keys.",
+    "citations": [
+      "https://github.com/gautamkrishnar/motrix-webextension#readme",
+      "https://github.com/gautamkrishnar/motrix-webextension/releases"
+    ],
+    "highlights": [
+      "Automatic browser download interception with RPC secret authentication",
+      "Published on both Chrome Web Store and Mozilla Add-ons (Edge/Opera compatible)",
+      "Automated Playwright end-to-end test suite"
+    ],
+    "tradeoffs": [
+      "Requires Motrix to already be running in the background; cannot auto-launch the desktop client."
+    ]
+  },
+  {
+    "id": "aria2-explorer",
+    "name": "Aria2 Explorer",
+    "url": "https://aria2e.com/",
+    "github_repo": "alexhua/Aria2-Explorer",
+    "stars": 1261,
+    "license": "BSD-3-Clause",
+    "is_open_source": true,
+    "category": "extensions",
+    "platforms": ["Chrome", "Edge"],
+    "technology": "Chromium Extension",
+    "description": "Chromium extension integrating AriaNg monitoring, smart download capture, and multi-server aria2 RPC routing.",
+    "axiom": "Power users running local or remote aria2 daemons need both automated download capture and a full task-management console inside the browser. Aria2 Explorer embeds AriaNg directly in popup, tab, window, and side-panel views with URL pattern routing and cookie/header forwarding.",
+    "citations": [
+      "https://github.com/alexhua/Aria2-Explorer#readme",
+      "https://github.com/alexhua/Aria2-Explorer/releases"
+    ],
+    "highlights": [
+      "Rule-based auto capture by size, extension, and domain with Alt-key bypass",
+      "Embedded AriaNg WebUI supporting popup, tab, window, and side-panel modes",
+      "Multi-RPC server switching with URL pattern matching and cookie forwarding"
+    ],
+    "tradeoffs": [
+      "Chromium-only (Chrome/Edge); requires an external aria2 daemon with RPC enabled."
+    ]
+  },
+  {
+    "id": "ariang",
+    "name": "AriaNg",
+    "url": "http://ariang.mayswind.net",
+    "github_repo": "mayswind/AriaNg",
+    "stars": 13280,
+    "license": "MIT",
+    "is_open_source": true,
+    "category": "selfhosted",
+    "platforms": ["Web", "Docker", "Linux", "macOS", "Windows"],
+    "technology": "Pure HTML + JavaScript",
+    "description": "Modern, zero-runtime web frontend for managing headless and self-hosted aria2 daemons.",
+    "axiom": "Headless aria2 servers on NAS boxes and homelabs expose only JSON-RPC/XML-RPC endpoints without an administrative interface. AriaNg delivers a complete, responsive management console in pure static HTML and JavaScript that requires no server-side compiler or runtime.",
+    "citations": [
+      "https://github.com/mayswind/AriaNg#readme",
+      "https://github.com/mayswind/AriaNg/releases"
+    ],
+    "highlights": [
+      "Zero server-side runtime; deployable as static files or single-file All-In-One HTML",
+      "Responsive desktop and mobile layout with incremental RPC polling",
+      "Multi-RPC host support, task sorting/filtering, speed charts, and BitTorrent peer inspection"
+    ],
+    "tradeoffs": [
+      "Frontend UI only; requires an existing aria2 daemon and standard builds must be served over HTTP rather than file://."
     ]
   },
   {
