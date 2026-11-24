@@ -232,6 +232,33 @@
     ]
   },
   {
+    "id": "prism",
+    "name": "Prism",
+    "url": "https://prismdl.site/",
+    "github_repo": "FortoGraphy/prism-download-manager",
+    "stars": 1300,
+    "license": "MIT",
+    "is_open_source": true,
+    "category": "desktop",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Rust + Tauri",
+    "description": "Cross-platform IDM-style manager with up to 32 connections per file, browser catching, video/MP3 via yt-dlp and torrents.",
+    "axiom": "IDM's browser catching and segmented downloads are closed and Windows-only. Prism rebuilds that workflow as an MIT-licensed Rust engine (tokio, rustls) in a Tauri shell: it keeps every connection busy until the last byte and writes data to disk before it saves progress, so a crash or power loss resumes from the last byte it safely wrote.",
+    "citations": [
+      "https://github.com/FortoGraphy/prism-download-manager#readme",
+      "https://github.com/FortoGraphy/prism-download-manager/blob/main/ARCHITECTURE.md"
+    ],
+    "highlights": [
+      "Up to 32 connections per file, with per-host memory and polite back-off",
+      "Resume checks the file's size, ETag and Last-Modified so a changed file is never stitched from two versions",
+      "Browser extension for Chromium browsers and Firefox, video/MP3 through yt-dlp, BitTorrent and magnet links, queues and a scheduler"
+    ],
+    "tradeoffs": [
+      "Young project (first release in October 2026)",
+      "Installers are not code-signed and macOS builds are not notarized yet, so SmartScreen and Gatekeeper warn on first launch."
+    ]
+  },
+  {
     "id": "persepolis",
     "name": "Persepolis Download Manager",
     "url": "https://persepolisdm.github.io/",
